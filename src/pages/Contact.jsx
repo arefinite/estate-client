@@ -25,7 +25,8 @@ const Contact = () => {
             ad! Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
             cupiditate atque sequi doloremque.
           </p>
-          <div className='flex flex-col lg:w-1/5  mt-12 '>
+            <div className='md:flex md:justify-center'>
+            <div className='flex flex-col lg:w-1/5  mt-12 '>
             <form
               onSubmit={e => e.preventDefault()}
               className='flex flex-col gap-4'
@@ -78,6 +79,7 @@ const Contact = () => {
                 className='p-2 border border-slate-300 bg-black text-white outline-none'
               />
             </form>
+          </div>
           </div>
         </div>
       </div>

@@ -6,17 +6,19 @@ const About = () => {
   return (
     <>
           <MobileFixedHeader icon='back' share text='back' link='/'/>
-     <main className='lg:pt-20'>
-      <div className='h-96 hidden md:block'>
+      <main className='lg:pt-16'>
+        <div className='container mx-auto'><Breadcrumb link1='/' link1Text='Home' link2Text='About Us' /></div>
+      <div className='relative h-96 hidden md:block'>
         <img
           src={images.about}
-          className='h-96 w-full object-cover object-bottom'
+          className='h-96 w-full object-cover object-bottom '
           alt=''
-        />
+          />
+          <div className='absolute top-[50%] left-[40%] text-white text-6xl'>About Us</div>
       </div>
       <div className='container mx-auto'>
-        <Breadcrumb link1='/' link1Text='Home' link2Text='About Us' />
-        <div className='px-4 md:px-0'>
+        
+        <div className='px-4 md:px-0 pt-4'>
           <h1 className='heading'>About Us</h1>
           <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
