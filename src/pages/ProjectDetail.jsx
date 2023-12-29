@@ -61,7 +61,7 @@ const ProjectDetails = () => {
             ))}
           </Swiper>
         </div>
-        <div className='text-center hidden md:block absolute z-[9999] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-6xl'>
+        <div className='text-center hidden md:block absolute z-[9] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-6xl'>
           <p>VELA DORCHESTER </p>
           <p>COLLECTION</p>
         </div>
