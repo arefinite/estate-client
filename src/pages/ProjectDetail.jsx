@@ -253,7 +253,7 @@ const ProjectDetails = () => {
             voluptatem?
           </p>
           <div className='flex justify-center'>
-          <img src={images.omniyat} className='my-8 h-32 w-full object-contain' alt='' />
+          <img src={images.omniyat} className='my-12 h-20 w-full object-contain' alt='' />
          </div>
         </div>
         </div>

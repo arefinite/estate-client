@@ -3,6 +3,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import { houseData } from '../../../data/houseData';
+import { Link } from 'react-router-dom';
 const DubaiAreaSlider = () => {
   return (
     <div className='border-b border-b-slate-200 md:border-0 md:px-4 xl:px-0'>
@@ -38,7 +39,8 @@ const DubaiAreaSlider = () => {
               {
                   houseData.map(house => (
                       <SwiperSlide key={house.id}>
-                          <div className='h-[31rem]'>
+                      <Link to='/dubai-area-detail'>
+                      <div className='h-[31rem]'>
                               <div>
                               <img src={house.url} alt={house.id} className='h-[26rem] object-cover w-full ' />
                           </div>
@@ -47,6 +49,7 @@ const DubaiAreaSlider = () => {
                                   
                                 </div>
                           </div>
+                          </Link>
                     </SwiperSlide>
                   ))
         }

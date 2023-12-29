@@ -4,6 +4,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import { Pagination } from 'swiper/modules'
 import { houseData } from '../../data/houseData'
+import { Link } from 'react-router-dom'
 
 const LuxuryProjects = () => {
   return (
@@ -38,7 +39,7 @@ const LuxuryProjects = () => {
             </div>
 
             <div className='mt-2 px-4 lg:px-0 '>
-              <p className='font-bold'>IGO Society House</p>
+             <Link to='project-details'> <p className='font-bold'>IGO Society House</p></Link>
               <p className='text-stone-400'>
                 <small>Downtown Dubai</small>
               </p>

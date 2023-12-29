@@ -5,6 +5,7 @@ import 'swiper/css/pagination'
 
 import { Pagination } from 'swiper/modules'
 import { houseData } from '../../../data/houseData'
+import { Link } from 'react-router-dom'
 
 const LatestProjectSlider = () => {
   return (
@@ -39,6 +40,7 @@ const LatestProjectSlider = () => {
       >
         {houseData.map(house => (
           <SwiperSlide key={house.id}>
+            <Link to='/project-detail'>
             <div className='h-[26rem]'>
               <div>
                 <img
@@ -54,6 +56,7 @@ const LatestProjectSlider = () => {
                 </p>
               </div>
             </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

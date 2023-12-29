@@ -27,7 +27,7 @@ const DubaiAreaDetail = () => {
             >
               {houseData.map(house => (
                 <SwiperSlide key={house.id}>
-                  <Link to='/lightbox'>
+                  <Link to=''>
                     <img
                       className='w-full h-96 object-cover'
                       src={house.url}
@@ -40,17 +40,20 @@ const DubaiAreaDetail = () => {
           </div>
         </div>
         <div className='container mx-auto'>
-          <Breadcrumb
+        
+          <div className='px-4 md:px-0'>
+        
+           
+            <div className='md:text-center '>
+              <div className='w-full md:max-w-[900px] mx-auto text-left'>
+              <Breadcrumb
             link1='/'
             link1Text='Home'
             link2Text='Dubai Areas'
             link3
             link3Text='Down Town Dubai'
-          />
-          <div className='px-4 md:px-0'>
-            <h1 className='heading md:text-center'>Down Town Dubai</h1>
-            <div className='md:text-center '>
-              <div className='w-full md:max-w-[900px] mx-auto text-left'>
+                />
+                 <h1 className='heading md:text-center'>Down Town Dubai</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Dolorum rem aspernatur ea minus! Id consequuntur dignissimos
