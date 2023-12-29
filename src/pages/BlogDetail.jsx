@@ -1,4 +1,3 @@
-
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -9,91 +8,136 @@ import Breadcrumb from '../components/shared/BreadCrumb'
 import MobileFixedHeader from '../components/shared/header/MobileFixedHeader'
 import { images } from '../constants'
 import { houseData } from '../data/houseData'
+import { Link } from 'react-router-dom'
 
 const BlogDetail = () => {
   return (
     <>
-          <MobileFixedHeader icon='back' share text='back' link='/'/>
-     <main className='lg:pt-20'>
-      <div className='h-96 hidden md:block'>
-        <img
-          src={images.sell}
-          className='h-96 w-full object-cover object-bottom'
-          alt=''
-        />
-      </div>
-      <div className='container mx-auto'>
-        <Breadcrumb link1='/' link1Text='Home' link2Text='Latest Blogs' link2='/blogs' link3Text='Blog' link3 />
-        <div className='px-4 md:px-0'>
-            <h1 className='heading'>Ultra-Luxury Waterfront Residences Direct Burj Khalifa Views</h1>
+      <MobileFixedHeader icon='back' share text='back' link='/' />
+      <main className='lg:pt-16'>
+        <div className='container mx-auto'>
+          <Breadcrumb
+            link1='/'
+            link1Text='Home'
+            link2Text='Blogs'
+            link2='/blogs'
+            link3
+            link3Text='Blog Detail'
+          />
+        </div>
+        <div className='h-[500px] hidden md:block relative'>
+          <img
+            src={images.sell}
+            className='h-[500px] w-full object-cover'
+            alt=''
+          />
+        </div>
+        <div className='container mx-auto m-6 max-w-[700px]'>
+          <div className='px-4 md:px-0'>
+            <h1 className='heading'>
+              Ultra-Luxury Waterfront Residences Direct Burj Khalifa Views
+            </h1>
             <p>11 June, 2023</p>
-          <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-          doloribus doloremque quaerat exercitationem saepe nihil! Totam
-          tempora, commodi veniam amet sed id itaque deleniti minus et nobis ad!
-          Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
-          cupiditate atque sequi doloremque.
-          </p>
-          <p className='mt-8'>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-          doloribus doloremque quaerat exercitationem saepe nihil! Totam
-          tempora, commodi veniam amet sed id itaque deleniti minus et nobis ad!
-          Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
-            cupiditate atque sequi doloremque.</p>
-          <p >  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-          doloribus doloremque quaerat exercitationem saepe nihil! Totam
-          tempora, commodi veniam amet sed id itaque deleniti minus et nobis ad!
-          Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
-            cupiditate atque sequi doloremque.</p>
-          <p className='mt-8'>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-          doloribus doloremque quaerat exercitationem saepe nihil! Totam
-          tempora, commodi veniam amet sed id itaque deleniti minus et nobis ad!
-          Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
-            cupiditate atque sequi doloremque.</p>
-          <p className='mt-8'>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-          doloribus doloremque quaerat exercitationem saepe nihil! Totam
-          tempora, commodi veniam amet sed id itaque deleniti minus et nobis ad!
-          Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
-          cupiditate atque sequi doloremque.</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+              doloribus doloremque quaerat exercitationem saepe nihil! Totam
+              tempora, commodi veniam amet sed id itaque deleniti minus et nobis
+              ad! Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
+              cupiditate atque sequi doloremque.
+            </p>
+            <p>
+              {' '}
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+              doloribus doloremque quaerat exercitationem saepe nihil! Totam
+              tempora, commodi veniam amet sed id itaque deleniti minus et nobis
+              ad! Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
+              cupiditate atque sequi doloremque.
+            </p>
+            <p>
+              {' '}
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+              doloribus doloremque quaerat exercitationem saepe nihil! Totam
+              tempora, commodi veniam amet sed id itaque deleniti minus et nobis
+              ad! Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
+              cupiditate atque sequi doloremque.
+            </p>
+            <p>
+              {' '}
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+              doloribus doloremque quaerat exercitationem saepe nihil! Totam
+              tempora, commodi veniam amet sed id itaque deleniti minus et nobis
+              ad! Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
+              cupiditate atque sequi doloremque.
+            </p>
+            <p className='mt-8'>
+              {' '}
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
+              doloribus doloremque quaerat exercitationem saepe nihil! Totam
+              tempora, commodi veniam amet sed id itaque deleniti minus et nobis
+              ad! Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
+              cupiditate atque sequi doloremque.
+            </p>
           </div>
           <div className='mt-8'>
-            <h1 className='heading px-4 md:px-0'>Similar Post</h1>
-            <div className="lg:container lg:mx-auto grid grid-cols-1 md:grid-cols-4 xl:grind-cols-4 lg:gap-2 gap-4 md:px-4 xl:px-0">
-          {
-              houseData.slice(0,4).map(house => (
-                  <div key={house.id} className="border-b border-b-slate-200 lg:border-0 ">
-                       <div className="pb-4">
-              <Swiper
-                pagination={true}
-                style={{ '--swiper-pagination-color': '#000' }}
-                modules={[Pagination]}
-                className='mySwiper'
-              >
-                {houseData.reverse().map((h,i) => (
-                  <SwiperSlide key={i}>
-                    <img
-                      src={h.url}
-                      alt={h.id}
-                      className='h-80 object-cover w-full '
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-        
+            <h1 className='heading px-4 md:px-0 md:text-center'>
+              Similar Post
+            </h1>
 
-                <div className='mt-2 px-4 lg:px-0 '>
-                    <p className='font-bold'>Ultra-Luxury Waterfront Residences Direct Burj Khalifa Views
-</p>
-                            
-                  </div>
-            </div>
-               </div>
-              ))
-          }
-    </div>
           </div>
+          
         </div>
-        
-    </main></>
+        <div className='container mx-auto'>
+        <div className='border-b border-b-slate-200 md:border-0 md:px-4 xl:px-0'>
+          <Swiper
+              style={{ "--swiper-pagination-color": '#000' }}
+        slidesPerView={1}
+        spaceBetween={7}
+      
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 7,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 7,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 7,
+            },
+            1280: {
+                slidesPerView: 4,
+                spaceBetween: 7,
+          }
+              }}
+              
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+              {
+                  houseData.map(house => (
+                      <SwiperSlide key={house.id}>
+                      <Link to='/dubai-area-detail'>
+                      <div className='h-[30rem]'>
+                              <div>
+                              <img src={house.url} alt={house.id} className='h-[26rem] object-cover w-full ' />
+                          </div>
+                              <div className='mt-2 px-4 md:px-0 '>
+                                  <span className='font-bold'>{house.title}</span>
+                                  
+                                </div>
+                          </div>
+                          </Link>
+                    </SwiperSlide>
+                  ))
+        }
+      
+      </Swiper>
+    </div>
+      </div>
+      </main>
+    </>
   )
 }
 export default BlogDetail

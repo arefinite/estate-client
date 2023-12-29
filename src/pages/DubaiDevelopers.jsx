@@ -11,7 +11,7 @@ const DubaiDevelopers = () => {
     <section>
       <MobileFixedHeader link='/' text='Back' icon='back' share />
 
-      <main className='container mx-auto lg:pt-20'>
+      <main className='container mx-auto lg:pt-16'>
         <Breadcrumb link1='/' link1Text='Home' link2Text='Dubai Developers' />
         <DubaiSection title='Dubai Developers' >
         <div className='max-w-96 mx-auto px-4 md:px-0'>

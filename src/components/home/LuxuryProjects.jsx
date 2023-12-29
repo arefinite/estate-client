@@ -1,4 +1,3 @@
-
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -17,14 +16,13 @@ const LuxuryProjects = () => {
           <div className='pb-4'>
             {/* <img src={house.url} alt={house.id} className='h-56 object-cover w-full ' /> */}
 
-            <div >
+            <div>
               <Swiper
                 pagination={true}
                 style={{ '--swiper-pagination-color': '#000' }}
                 modules={[Pagination]}
                 className='mySwiper'
               >
-               
                 {houseData.slice(5).map(h => (
                   <SwiperSlide key={h.id}>
                     <img
@@ -34,19 +32,21 @@ const LuxuryProjects = () => {
                     />
                   </SwiperSlide>
                 ))}
-           
               </Swiper>
             </div>
 
             <div className='mt-2 px-4 lg:px-0 '>
-             <Link to='project-detail'> <p className='font-bold'>IGO Society House</p></Link>
-              <p className='text-stone-400'>
+              <Link to='project-detail'>
+                {' '}
+                <div className='font-bold'>IGO Society House</div>
+              </Link>
+              <div className='text-stone-400'>
                 <small>Downtown Dubai</small>
-              </p>
-              <p className='mt-2'>
+              </div>
+              <div className='mt-2'>
                 <small>From</small>{' '}
                 <span className='font-bold'>AED 320,000,000</span>
-              </p>
+              </div>
             </div>
           </div>
         </div>

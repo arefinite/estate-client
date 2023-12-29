@@ -54,8 +54,12 @@ h1 {
   font-weight: 500;
 }
 
-nav p, li {
+nav div, li {
   cursor: pointer;
+}
+
+p{
+  padding-bottom:1.5rem;
 }
 
 .boxShadow{

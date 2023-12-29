@@ -21,15 +21,15 @@ const NavigationItems = ({ setNavOpen, mode }) => {
       )}
 
       <div className='px-4 space-y-5'>
-        <p className='mt-6'>
+        <div className='mt-6'>
          <NavLink to ='/latest-projects' onClick={() => setNavOpen(false)}> <span>Latest Projects</span></NavLink>
-        </p>
+        </div>
 
-        <p>
+        <div>
         <NavLink to ='/luxury-projects' onClick={() => setNavOpen(false)}> <span>Luxury Projects</span></NavLink>
-        </p>
+        </div>
 
-        <p
+        <div
           onClick={() => {
             setShow1(prev => !prev)
             setShow2(false)
@@ -44,9 +44,9 @@ const NavigationItems = ({ setNavOpen, mode }) => {
               <IoIosArrowDown style={{ color: '#808080' }} />
             )}
           </span>
-        </p>
+        </div>
         {show1 && (
-          <div className='dropdown pb-3'>
+          <div className='dropdown'>
             <ul className=' leading-10'>
 
                 <NavLink to ='/apartments' onClick={() => setNavOpen(false)}><li>Apartments</li></NavLink>
@@ -61,7 +61,7 @@ const NavigationItems = ({ setNavOpen, mode }) => {
             </ul>
           </div>
         )}
-        <p
+        <div
           onClick={() => {
             setShow2(prev => !prev)
             setShow1(false)
@@ -76,10 +76,10 @@ const NavigationItems = ({ setNavOpen, mode }) => {
               <IoIosArrowDown style={{ color: '#808080' }} />
             )}
           </span>
-        </p>
+        </div>
         {show2 && (
           <div className='dropdown'>
-            <ul className=' leading-10 pb-3'>
+            <ul className=' leading-10'>
              <NavLink to='/dubai-area-detail' onClick={() => setNavOpen(false)}> <li>Palm Jumeirah</li></NavLink>
 
              <NavLink to='/dubai-area-detail' onClick={() => setNavOpen(false)}> <li>Downtown Dubai</li></NavLink>
@@ -99,7 +99,7 @@ const NavigationItems = ({ setNavOpen, mode }) => {
           </div>
         )}
 
-        <p
+        <div
           onClick={() => {
             setShow3(prev => !prev), setShow1(false)
             setShow2(false)
@@ -113,10 +113,10 @@ const NavigationItems = ({ setNavOpen, mode }) => {
               <IoIosArrowDown style={{ color: '#808080' }} />
             )}
           </span>
-        </p>
+        </div>
         {show3 && (
           <div className='dropdown'>
-            <ul className=' leading-10 pb-3'>
+            <ul className=' leading-10'>
             <NavLink to='explore/why-dubai' onClick={() => setNavOpen(false)}>
 								<li>Why Dubai</li>
 							</NavLink>
@@ -142,29 +142,34 @@ const NavigationItems = ({ setNavOpen, mode }) => {
           </div>
         )}
 
-        <p className=''>
+        <div>
           <span className='flex items-center gap-2'>
             <NavLink to='/dubai-developers' onClick={() => setNavOpen(false)}>
               Dubai Developers
             </NavLink>
           </span>
-        </p>
+        </div>
 
-        <p className=' '>
+        <div>
         <NavLink to='/blogs' onClick={() => setNavOpen(false)}><span className='flex items-center gap-2'>Blogs</span></NavLink>
-        </p>
+        </div>
 
-        <p className=' '>
+        <div>
         <NavLink to='/sell-your-property' onClick={() => setNavOpen(false)}>
         <span className='flex items-center gap-2'>Sell Your Property</span>
         </NavLink>
-        </p>
+        </div>
         
-        <p>
+        <div>
         <NavLink to='/about' onClick={() => setNavOpen(false)}>
           <span className='flex items-center gap-2'>About Us</span>
         </NavLink>
-        </p>
+        </div>
+        <div>
+        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
+          <span className='flex items-center gap-2'>Contact Us</span>
+        </NavLink>
+        </div>
 
        
        

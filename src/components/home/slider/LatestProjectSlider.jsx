@@ -50,10 +50,10 @@ const LatestProjectSlider = () => {
                 />
               </div>
               <div className='mt-2 px-4 md:px-0 '>
-                <p className='font-bold'>IGO Society House</p>
-                <p className='text-stone-400'>
+                <div className='font-bold'>IGO Society House</div>
+                <div className='text-stone-400'>
                   <small>Downtown Dubai</small>
-                </p>
+                </div>
               </div>
             </div>
             </Link>

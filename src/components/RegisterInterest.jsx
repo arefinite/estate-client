@@ -4,10 +4,10 @@ import SecondaryMobileHeader from "./shared/header/SecondaryMobileHeader"
 const RegisterInterest = () => {
 	return (
 		<div>
-			<div>
+			<div >
 				<div>
-					<div className="md:hidden"><SecondaryMobileHeader icon='delete' name='Register Interest' /></div>
-					<div className="hidden md:block"><SecondaryMobileHeader  name='Register Interest' /></div>
+					{/* <div className="hidden md:block"><SecondaryMobileHeader icon='delete' name='Register Interest' /></div> */}
+					<div className=""><SecondaryMobileHeader  name='Register Interest' /></div>
 					<div>
 						<div>
 							<h1 className='text-center py-8 heading w-screen md:w-full'>
@@ -53,7 +53,7 @@ const RegisterInterest = () => {
 									</div>
 									<input
 										type='submit'
-										value='Send Message'
+										value='Register Interest'
 										className='p-2 border border-slate-300 bg-black text-white outline-none'
 									/>
 								</form>
