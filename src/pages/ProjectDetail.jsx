@@ -80,7 +80,7 @@ const ProjectDetails = () => {
           <span className='text-stone-400 underline'>View Map</span>
         </div>
 
-        <div className='flex justify-between mt-4 hidden md:block  items-center'>
+        <div className='md:flex justify-between mt-4 hidden items-center'>
           <div className='space-y-2'>
             <div>Price From AED 390,000,000</div>
             <div>Handover Q4,2026</div>
