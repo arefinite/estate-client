@@ -61,14 +61,14 @@ const ProjectDetails = () => {
             ))}
           </Swiper>
         </div>
-        <div className='text-center hidden md:block absolute z-[9] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-6xl'>
+        <div className='text-center  absolute z-[9] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-6xl'>
           <p>VELA DORCHESTER </p>
           <p>COLLECTION</p>
         </div>
       </div>
-      <div style={{ margin: '0' }}></div>
+    
 
-      <div className='container px-4 md:px-0 mx-auto md:max-w-[700px]'>
+      <div className='container md:mt-24 px-4 md:px-0 mx-auto md:max-w-[700px]'>
         <div className='-mx-4 md:-mx-0'>
           <Breadcrumb link1='/' link1Text='Home' link2Text='Project Details' />
         </div>
