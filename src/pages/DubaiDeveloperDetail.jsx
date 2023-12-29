@@ -103,7 +103,7 @@ const DubaiDeveloperDetail = () => {
       <div>
         {showModal && (
           <CommonModal setShowModal={setShowModal}>
-            <RegisterInterest />
+            <RegisterInterest value='emaar' />
           </CommonModal>
         )}
       </div>

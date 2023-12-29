@@ -10,14 +10,14 @@ const DubaiAreas = () => {
   return (
     <section>
       <MobileFixedHeader link='/' text='Back' icon='back' share />
-      <main className='container mx-auto lg:pt-20'>
+      <main className='container mx-auto lg:pt-16'>
         <Breadcrumb link1='/' link1Text='Home' link2Text='Dubai Areas' />
         <DubaiSection title='Dubai Areas' >
         <div className='max-w-96 mx-auto px-4 md:px-0'>
           <SearchBox placeholder='Search Areas...' />
           </div>
           </DubaiSection>
-        <div className='md:container md:mx-auto grid grid-cols-1 md:grid-cols-3 md:gap-2 mt-10 gap-4 '>
+        <div className='md:container md:mx-auto grid grid-cols-1 md:grid-cols-3 md:gap-2 gap-4 '>
           {houseData.map(house => (
             <Link to='/dubai-area-detail' key={house.id}>
                 <div
@@ -34,12 +34,12 @@ const DubaiAreas = () => {
                 </div>
                 <div className='mt-2 px-4 md:px-2  '>
                   <div className='flex justify-between'>
-                    <p className='font-bold'>IGO Society House</p>
-                    <p className='text-stone-400 underline'><small>View Map</small></p>
+                    <div className='font-bold'>IGO Society House</div>
+                    <div className='text-stone-400 underline'><small>View Map</small></div>
                   </div>
-                  <p className='text-stone-400 underline'>
+                  <div className='text-stone-400 underline'>
                     <small>450 Properties</small>
-                  </p>
+                  </div>
                  <button className='bg-black text-white w-full py-3 mt-4 md:hidden'>Explore More</button>
                 </div>
               </div>

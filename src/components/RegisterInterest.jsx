@@ -1,7 +1,7 @@
 import SecondaryMobileHeader from "./shared/header/SecondaryMobileHeader"
 
 
-const RegisterInterest = () => {
+const RegisterInterest = ({value}) => {
 	return (
 		<div className="p-1 pb-4 md:pb-0 md:p-5">
 			<div>
@@ -11,7 +11,7 @@ const RegisterInterest = () => {
 					<div>
 						<div>
 							<h1 className='text-center py-8 heading w-screen md:w-full'>
-								Emaar
+								{value}
 							</h1>
 							<div>
 								<form
