@@ -39,7 +39,7 @@ const LuxuryProjects = () => {
             </div>
 
             <div className='mt-2 px-4 lg:px-0 '>
-             <Link to='project-details'> <p className='font-bold'>IGO Society House</p></Link>
+             <Link to='project-detail'> <p className='font-bold'>IGO Society House</p></Link>
               <p className='text-stone-400'>
                 <small>Downtown Dubai</small>
               </p>
