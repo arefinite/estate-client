@@ -6,17 +6,19 @@ const Contact = () => {
   return (
     <>
     <MobileFixedHeader icon='back' text='back' link='/'/>
-    <main className='lg:pt-20'>
-      <div className='h-96 hidden md:block'>
+      <main className='lg:pt-16'>
+      <div className='container mx-auto'><Breadcrumb link1='/' link1Text='Home' link2Text='Contact Us' /></div>
+      <div className='h-96 hidden md:block relative'>
         <img
           src={images.contact}
           className='h-96 w-full object-cover object'
           alt=''
-        />
+          />
+          <div className='absolute top-[45%] left-[40%] text-white text-6xl'>Contact Us</div>
       </div>
       <div className='container mx-auto'>
-        <Breadcrumb link1='/' link1Text='Home' link2Text='Contact Us' />
-        <div className='px-4 md:px-0'>
+      
+        <div className='px-4 md:px-0 mt-6'>
           <h1 className='heading'>Contact Us</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit

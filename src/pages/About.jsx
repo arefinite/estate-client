@@ -18,7 +18,7 @@ const About = () => {
       </div>
       <div className='container mx-auto'>
         
-        <div className='px-4 md:px-0 pt-4'>
+        <div className='px-4 md:px-0 mt-6'>
           <h1 className='heading'>About Us</h1>
           <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
