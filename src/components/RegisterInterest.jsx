@@ -54,7 +54,7 @@ const RegisterInterest = ({value}) => {
 									<input
 										type='submit'
 										value='Register Interest'
-										className='p-2 border border-slate-300 bg-black text-white outline-none'
+										className='p-2 border border-slate-300 bg-black text-white outline-none cursor-pointer'
 									/>
 								</form>
 							</div>

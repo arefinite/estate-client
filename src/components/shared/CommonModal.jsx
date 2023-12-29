@@ -10,7 +10,7 @@ const CommonModal = ({setShowModal,children}) => {
 		minWidth: "350px",
 		backgroundColor: "white",
 		minHeight: "380px",
-    zIndex: 100,
+    zIndex: 111111,
 
 
 	}

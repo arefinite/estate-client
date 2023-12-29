@@ -14,7 +14,7 @@ const Villa = () => {
     <section>
       <MobileFixedHeader link='/' text='Back' icon='back' share />
 
-      <main className='container mx-auto md:pt-20'>
+      <main className='container mx-auto md:pt-16'>
         <Breadcrumb
           link1='/'
           link1Text='Home'
@@ -24,7 +24,7 @@ const Villa = () => {
         <div>
           <div className='px-4 md:px-0 space-y-2'>
            
-              <h1 className='heading md:text-center'>Villa</h1>
+              <h1 className='heading md:text-center mt-8'>Villa</h1>
             
             <div className='md:text-center w-full md:max-w-[900px] mx-auto text-left'>
               <p>
@@ -35,7 +35,7 @@ const Villa = () => {
             </div>
           </div>
         </div>
-        <div className='mt-8 px-4 md:px-0'>
+        <div className='mt-4 px-4 md:px-0'>
         <Swiper 
 				slidesPerView={'2'}
                 spaceBetween={7}
@@ -86,11 +86,11 @@ const Villa = () => {
                 </div>
                 <div className='mt-2 px-4 md:px-2  '>
                   <div className='flex justify-between'>
-                    <p className='font-bold'>IGO Society House</p>
+                    <div className='font-bold'>IGO Society House</div>
                   </div>
-                  <p className='text-stone-400 '>
+                  <div className='text-stone-400 '>
                     <small>Downtown Dubai</small>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
