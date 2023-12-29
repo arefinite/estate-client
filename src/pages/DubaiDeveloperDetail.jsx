@@ -31,7 +31,7 @@ const DubaiDeveloperDetail = () => {
           link3Text='Dubai Developer'
         />
         <div>
-          <div className='md:text-center mt-6 md:mt-20 px-4 md:px-0 space-y-4'>
+          <div className='md:text-center mt-6 md:mt-20 px-4 md:px-0 space-y-6'>
             <div className='p-6 md:p-0 flex-1  grid place-content-center md:border-0 border border-slate-300 w-full'>
               <img
                 src={images.emaar}
@@ -45,7 +45,7 @@ const DubaiDeveloperDetail = () => {
                 Dolorum rem aspernatur ea minus! Id consequuntur dignissimos
                 libero consequatur aperiam? Aspernatur.
               </p>
-              <p className='mt-4'>
+              <p className='mt-2'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Possimus, eaque eius. Tenetur laborum neque sunt eius velit
                 dignissimos dolore, doloremque optio eum repellat? Quae corporis
@@ -61,7 +61,7 @@ const DubaiDeveloperDetail = () => {
             </button>
           </div>
 
-          {/* { registerInterest && <div><RegisterInterest/></div>} */}
+          {/* { showModal && <div className='absolute inset-0 bg-white md:static md:bg-none'><RegisterInterest/></div>} */}
           <div className='mt-8 px-4 md:px-0'>
           <ProjectForSale />
           </div>
@@ -100,7 +100,7 @@ const DubaiDeveloperDetail = () => {
         </div>
       </main>
 
-      <div className='hidden md:block'>
+      <div>
         {showModal && (
           <CommonModal setShowModal={setShowModal}>
             <RegisterInterest />

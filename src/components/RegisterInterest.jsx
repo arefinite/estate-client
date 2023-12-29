@@ -3,10 +3,10 @@ import SecondaryMobileHeader from "./shared/header/SecondaryMobileHeader"
 
 const RegisterInterest = () => {
 	return (
-		<div>
-			<div >
+		<div className="p-1 pb-4 md:pb-0 md:p-5">
+			<div>
 				<div>
-					{/* <div className="hidden md:block"><SecondaryMobileHeader icon='delete' name='Register Interest' /></div> */}
+					{/* <div className="md:hidden"><SecondaryMobileHeader icon='delete' name='Register Interest' /></div> */}
 					<div className=""><SecondaryMobileHeader  name='Register Interest' /></div>
 					<div>
 						<div>

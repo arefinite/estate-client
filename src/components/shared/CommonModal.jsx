@@ -9,17 +9,15 @@ const CommonModal = ({setShowModal,children}) => {
 		transform: "translate(-50%, -50%)",
 		minWidth: "350px",
 		backgroundColor: "white",
-		padding: "20px",
+		minHeight: "380px",
     zIndex: 100,
-    overflow: 'hidden',
-    scroll: false,
+
 
 	}
   const overlay = {
     position: 'fixed',
     inset: 0,
     backgroundColor: 'rgba(0, 0, 0, 0.7)',
-
     zIndex:33,
   }
 
@@ -36,7 +34,7 @@ const CommonModal = ({setShowModal,children}) => {
 				<div>
 					{children}
 				</div>
-				<button style={closeButton} onClick={() => setShowModal(false)}>
+				<button  style={closeButton} onClick={() => setShowModal(false)}>
 					<FaXmark />
 				</button>
 			</div>
