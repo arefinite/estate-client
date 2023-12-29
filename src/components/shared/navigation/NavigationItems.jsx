@@ -151,7 +151,7 @@ const NavigationItems = ({ setNavOpen, mode }) => {
         </p>
 
         <p className=' '>
-        <NavLink to='/sell-your-property' onClick={() => setNavOpen(false)}><span className='flex items-center gap-2'>Blogs</span></NavLink>
+        <NavLink to='/blogs' onClick={() => setNavOpen(false)}><span className='flex items-center gap-2'>Blogs</span></NavLink>
         </p>
 
         <p className=' '>
