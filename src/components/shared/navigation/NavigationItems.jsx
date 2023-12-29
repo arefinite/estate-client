@@ -21,7 +21,7 @@ const NavigationItems = ({ setNavOpen, mode }) => {
       )}
 
       <div className='px-4 space-y-5'>
-        <p className='mt-12 '>
+        <p className='mt-6'>
          <NavLink to ='/latest-projects' onClick={() => setNavOpen(false)}> <span>Latest Projects</span></NavLink>
         </p>
 
@@ -167,101 +167,7 @@ const NavigationItems = ({ setNavOpen, mode }) => {
         </p>
 
        
-        {/* <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p>
-         
-        <p>
-        <NavLink to='/contact' onClick={() => setNavOpen(false)}>
-          <span className='flex items-center gap-2'>Contact Us</span>
-      </NavLink>
-        </p> */}
+       
       </div>
     </nav>
   )

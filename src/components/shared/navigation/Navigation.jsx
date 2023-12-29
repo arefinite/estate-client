@@ -8,17 +8,15 @@ const Navigation = ({ navOpen, setNavOpen, mode }) => {
       {mode === 'desktop' && (
         <>
           <div
-            className={`fixed shadow-2xl overflow-auto overscroll-contain top-0 right-0 bg-white  w-[250px] z-[3333] h-screen transition-transform ease-in-out duration-500 ${
-              navOpen ? '' : 'transform translate-x-[250px] '
+            className={`fixed shadow-2xl overflow-auto no-scrollbar  top-0 right-0 bg-white  w-[300px] z-[3333] h-screen transition-transform ease-in-out duration-500 ${
+              navOpen ? '' : 'transform translate-x-[300px] '
             }`}
           >
-            <div className='absolute right-5 top-5'>
-              <FaXmark
-                className='cursor-pointer'
-                onClick={() => setNavOpen(false)}
-              />
+            <div className='flex items-center justify-between px-4 mt-6'>
+              <div className='bold'>Welcome!</div>
+              <div className='cursor-pointer' onClick={()=>setNavOpen(false)}><FaXmark/></div>
             </div>
-
+             <hr className='mt-4' />
             <NavigationItems setNavOpen={setNavOpen} />
           </div>
           <div
