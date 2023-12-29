@@ -6,22 +6,24 @@ const SellProperty = () => {
   return (
     <>
       <MobileFixedHeader icon='back' text='back' link='/' />
-      <main className='lg:pt-20'>
-        <div className='h-96 hidden md:block'>
+      <main className='lg:pt-16'>
+        <div className='container mx-auto'>  <Breadcrumb
+            link1='/'
+            link1Text='Home'
+            link2Text='Sell Your Property'
+          /></div>
+        <div className='h-96 hidden md:block relative'>
           <img
             src={images.sell}
             className='h-96 w-full object-cover object'
             alt=''
           />
+           <div className='absolute top-[45%] left-[35%] text-white text-6xl'>Sell Your Property</div>
         </div>
         <div className='container mx-auto'>
-          <Breadcrumb
-            link1='/'
-            link1Text='Home'
-            link2Text='Sell Your Property'
-          />
+        
           <div className='px-4 md:px-0'>
-            <h1 className='heading'>Sell Your Property</h1>
+            <h1 className='heading mt-6'>Sell Your Property</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
               doloribus doloremque quaerat exercitationem saepe nihil! Totam

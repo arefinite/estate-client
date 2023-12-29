@@ -14,7 +14,7 @@ const About = () => {
           className='h-96 w-full object-cover object-bottom '
           alt=''
           />
-          <div className='absolute top-[50%] left-[40%] text-white text-6xl'>About Us</div>
+          <div className='absolute top-[45%] left-[40%] text-white text-6xl'>About Us</div>
       </div>
       <div className='container mx-auto'>
         
