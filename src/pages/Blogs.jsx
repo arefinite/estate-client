@@ -15,9 +15,9 @@ const Blogs = () => {
             alt=''
           />
         </div>
-          <div className='container mx-auto'><Breadcrumb link1='/' link1Text='Home' link2Text='Latest Blogs' /></div>
         <div className='md:max-w-[500px] md:flex md:flex-col md:items-center md:justify-center mx-auto'>
           <div className='px-4 md:px-0'>
+          <Breadcrumb link1='/' link1Text='Home' link2Text='Latest Blogs' />
             <h1 className='heading'>Latest Blogs</h1>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit

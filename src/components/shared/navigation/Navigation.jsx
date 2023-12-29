@@ -8,7 +8,7 @@ const Navigation = ({ navOpen, setNavOpen, mode }) => {
       {mode === 'desktop' && (
         <>
           <div
-            className={`fixed shadow-2xl overflow-auto overscroll-contain top-0 right-0 bg-slate-100 opacity-90 w-[250px] z-[3333] h-screen transition-transform ease-in-out duration-500 ${
+            className={`fixed shadow-2xl overflow-auto overscroll-contain top-0 right-0 bg-white  w-[250px] z-[3333] h-screen transition-transform ease-in-out duration-500 ${
               navOpen ? '' : 'transform translate-x-[250px] '
             }`}
           >
