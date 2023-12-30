@@ -4,7 +4,6 @@ import { About, Apartments, BlogDetail, Blogs, Contact, DubaiAreaDetail, DubaiAr
 import DashboardLayout from '../layouts/DashboardLayout'
 import Dashboard from '../pages/dashboard/Dashboard'
 import Login from '../pages/dashboard/Login'
-import Lightbox from '../components/Lightbox'
 
 export const appRouter = createBrowserRouter([
     {
@@ -124,10 +123,7 @@ export const appRouter = createBrowserRouter([
             path: 'project-detail',
             element: <ProjectDetail />,
           },
-          {
-            path: 'lightbox',
-            element:<Lightbox/>
-          }
+       
           
         ],
     }
