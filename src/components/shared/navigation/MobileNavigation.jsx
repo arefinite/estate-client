@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { icons } from '../../../constants'
 const MobileNavigation = ({ setNavOpen, setMode }) => {
   return (
-    <div className='lg:hidden  shadow-lg border-t border-t-stone-200 fixed z-10 bottom-0 bg-white h-[60px] flex items-center justify-between w-full px-4 text-stone-900'>
+    <div className='lg:hidden  z-[9999999]  shadow-lg border-t border-t-stone-200 fixed bottom-0 bg-white h-[60px] flex items-center justify-between w-full px-4 text-stone-900'>
       <Link to='/'>
         <div className='flex flex-col justify-center items-center text-base space-y-1'>
           <span>

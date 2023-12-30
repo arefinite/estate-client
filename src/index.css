@@ -77,3 +77,28 @@ p{
       scrollbar-width: none;  /* Firefox */
 }
 }
+
+/* Style the artificial checkbox */
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.3em;
+  height: 1.3em;
+  border: 2px solid #ccc; /* White border */
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked {
+  background-color: #000; /* Black background when checked */
+  border-color: #fff; /* White border when checked */
+}
+
+.custom-checkbox:checked::before {
+  content: '\2713'; /* Checkmark symbol */
+  display: block;
+  text-align: center;
+  line-height: 1em;
+  color: #fff; /* White checkmark */
+}
