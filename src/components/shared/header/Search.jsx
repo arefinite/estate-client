@@ -1,13 +1,11 @@
 import { CiSearch } from 'react-icons/ci'
 import { PiSlidersFill } from 'react-icons/pi'
 import { useLocation } from 'react-router-dom'
+import SearchFilter from '../../SearchFilter'
+import SearchFilterMobile from '../../SearchFilterMobile'
 
-import SearchFilter from '../SearchFilter'
-import { useState } from 'react'
-
-const Search = () => {
+const Search = ({showFilter,setShowFilter}) => {
   const { pathname } = useLocation()
-  const [showFilter, setShowFilter] = useState(false)
   // if (showFilter) {
   //   document.body.style.overflow = 'hidden'
   // } else {
@@ -37,9 +35,16 @@ const Search = () => {
         </div>
       </div>
       {showFilter && (
-        <div className='absolute bg-white md:min-w-[500px] top-14 rounded-3xl p-6 shadow-lg'>
+        <>
+          <div className='hidden md:block'>
+          <div className='absolute bg-white md:min-w-[500px] top-14 rounded-3xl p-6 shadow-lg'>
           <SearchFilter />
+          </div>
+         </div>
+          <div className='md:hidden'>
+            <SearchFilterMobile setShowFilter={setShowFilter} />
         </div>
+        </>
       )}
     </div>
   )

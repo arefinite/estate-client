@@ -12,6 +12,7 @@ const SecondaryMobileHeader = ({
   nav = false,
   setNavOpen,
   setShowLightBox,
+  setShowFilter
 }) => {
   
   return (
@@ -33,10 +34,10 @@ const SecondaryMobileHeader = ({
             ) : (
               <Link to={link}>
                 <div className='flex gap-1'>
-                  {icon === 'back' ? (
-                    <IoIosArrowBack />
-                  ) : icon === 'delete' ? (
-                    <FaXmark onClick={()=>setShowLightBox && setShowLightBox(false)} />
+                    {icon === 'back' ? (
+                      <IoIosArrowBack />
+                    ) : icon === 'delete' ? (
+                        <FaXmark onClick={() => { setShowLightBox && setShowLightBox(false);  setShowFilter && setShowFilter(false)}} />
                   ) : null}
 
                   <div className='relative  bottom-1'>{text}</div>

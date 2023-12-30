@@ -8,21 +8,25 @@ import Wrapper from '../components/Wrapper'
 const RootLayout = () => {
   const [navOpen, setNavOpen] = useState(false)
   const [mode, setMode] = useState('desktop')
+  const [showFilter, setShowFilter] = useState(false)
 
   if (navOpen) {
     document.body.style.overflow = 'hidden'
   } else {
     document.body.style.overflow = 'auto'
   }
+
+  
   return (
     <Wrapper>
-      <Header setNavOpen={setNavOpen} navOpen={navOpen} />
+      <Header setNavOpen={setNavOpen} navOpen={navOpen} setShowFilter={setShowFilter} showFilter={showFilter} />
       <Outlet />
       <Footer />
       <MobileNavigation
         navOpen={navOpen}
         setNavOpen={setNavOpen}
         setMode={setMode}
+        setShowFilter={setShowFilter}
       />
       <Navigation
         navOpen={navOpen}

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { icons } from '../../../constants'
-const MobileNavigation = ({ setNavOpen, setMode }) => {
+const MobileNavigation = ({ setNavOpen, setMode,setShowFilter }) => {
   return (
     <div className='lg:hidden  z-10  shadow-lg border-t border-t-stone-200 fixed bottom-0 bg-white h-[60px] flex items-center justify-between w-full px-4 text-stone-900'>
       <Link to='/'>
@@ -12,7 +12,7 @@ const MobileNavigation = ({ setNavOpen, setMode }) => {
         </div>
       </Link>
 
-      <div className='flex flex-col text-stone-500 justify-center items-center text-base gap-2'>
+      <div className='flex flex-col text-stone-500 justify-center items-center text-base gap-2' onClick={()=>setShowFilter(true)}>
         <span>
           <img src={icons.search} alt='search' />
         </span>

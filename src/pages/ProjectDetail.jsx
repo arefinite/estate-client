@@ -19,7 +19,6 @@ import RegisterInterest from '../components/RegisterInterest'
 import LightBox from '../components/LightBox'
 import LightBoxMobile from '../components/LightBoxMobile'
 
-
 const buttons = [
   'Studio',
   '1 Kitchen',
@@ -40,7 +39,7 @@ const ProjectDetails = () => {
   } else {
     document.body.style.overflow = 'auto'
   }
-  console.log(showLightBox);
+  console.log(showLightBox)
 
   return (
     <div>
@@ -75,13 +74,13 @@ const ProjectDetails = () => {
       <div className='container md:mt-24 px-4 md:px-0 mx-auto md:max-w-[700px]'>
         <div className='-mx-4 md:-mx-0'>
           <div className='px-4 md:px-0'>
-          <div
-            onClick={() => setShowLightBox(true)}
-            className='relative bottom-16 z-20 text-white bg-slate-900 max-w-32 text-center rounded-2xl opacity-80  py-2 cursor-pointer text-xs'
-          >
-            Show All Photos
+            <div
+              onClick={() => setShowLightBox(true)}
+              className='relative bottom-16 z-20 text-white bg-slate-900 max-w-32 text-center rounded-2xl opacity-80  py-2 cursor-pointer text-xs'
+            >
+              Show All Photos
+            </div>
           </div>
-         </div>
           <Breadcrumb link1='/' link1Text='Home' link2Text='Project Details' />
         </div>
         <h1 className='heading'>
@@ -321,20 +320,18 @@ const ProjectDetails = () => {
           <RegisterInterest value='Vela Dorchester Collection' />
         </CommonModal>
       )}
-      {
-        showLightBox && (
-          <>
+      {showLightBox && (
+        <>
           <div className='hidden md:block'>
-             <CommonModal setShowLightBox={setShowLightBox}>
-            <LightBox/>
-          </CommonModal>
+            <CommonModal setShowLightBox={setShowLightBox}>
+              <LightBox />
+            </CommonModal>
           </div>
           <div className='md:hidden'>
-              <LightBoxMobile setShowLightBox={setShowLightBox} />
-            </div>
-          </>
-        )
-      }
+            <LightBoxMobile setShowLightBox={setShowLightBox} />
+          </div>
+        </>
+      )}
     </div>
   )
 }

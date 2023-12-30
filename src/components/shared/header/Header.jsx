@@ -3,7 +3,7 @@ import Logo from './Logo'
 import Navs from './Navs'
 import Search from './Search'
 
-const Header = ({ setNavOpen, navOpen }) => {
+const Header = ({ setNavOpen, navOpen,showFilter,setShowFilter }) => {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Header = ({ setNavOpen, navOpen }) => {
           className={`lg:container lg:mx-auto lg:flex  lg:justify-between items-center`}
         >
           <Logo />
-          <Search />
+          <Search setShowFilter={setShowFilter} showFilter={showFilter} />
           <Navs scrolled={scrolled} setNavOpen={setNavOpen} navOpen={navOpen} />
         </section>
       </header>
