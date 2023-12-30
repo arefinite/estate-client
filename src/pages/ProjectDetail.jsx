@@ -16,7 +16,7 @@ import { images } from '../constants'
 import Breadcrumb from '../components/shared/BreadCrumb'
 import CommonModal from '../components/shared/CommonModal'
 import RegisterInterest from '../components/RegisterInterest'
-import LightBox from '../components/Lightbox'
+import LightBox from '../components/LightBox'
 import LightBoxMobile from '../components/LightBoxMobile'
 
 
