@@ -10,7 +10,7 @@ const RegisterInterest = ({value}) => {
 					<div className=""><SecondaryMobileHeader  name='Register Interest' /></div>
 					<div>
 						<div>
-							<h1 className='text-center py-8 heading w-screen md:w-full'>
+							<h1 className='text-center pb-8 heading w-screen md:w-full'>
 								{value}
 							</h1>
 							<div>

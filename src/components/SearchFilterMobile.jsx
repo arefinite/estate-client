@@ -83,7 +83,7 @@ const SearchFilterMobile = ({setShowFilter}) => {
 									<label htmlFor='develop' className='heading'>
 										Developer
 									</label>
-									<select className='p-2 pr-4 border border-slate-300 w-full outline-none  '>
+									<select className='dev p-2 pr-4 border border-slate-300 w-full outline-none  '>
 										<option value=''>Please Select</option>
 										<option value=''>Develope One</option>
 										<option value=''>Developer Two</option>

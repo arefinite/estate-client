@@ -6,11 +6,7 @@ import Modal from '../Modal'
 
 const MobileFixedHeader = ({ link, icon, text, download, share }) => {
   const [showModal, setShowModal] = useState(false)
-  if (showModal) {
-    document.body.style.overflow = 'hidden'
-  } else {
-    document.body.style.overflow = 'auto'
-  }
+
   return (
     <>
       <div className='md:hidden flex justify-center sticky h-16 top-0 bg-white border-b border-slate-200 z-[50]'>
