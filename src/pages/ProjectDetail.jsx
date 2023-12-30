@@ -314,7 +314,7 @@ const ProjectDetails = () => {
         </div>
       </div>
 
-      <RegisterInt setShowModal={setShowModal} />
+      { !showModal && <RegisterInt setShowModal={setShowModal} />}
       {showModal && (
         <CommonModal setShowModal={setShowModal}>
           <RegisterInterest value='Vela Dorchester Collection' />
