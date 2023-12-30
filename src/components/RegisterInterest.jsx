@@ -32,7 +32,7 @@ const RegisterInterest = ({value}) => {
 									/>
 									<div className='border border-slate-300 w-full'>
                                         <select
-                                            className="w-1/6"
+                                            className=""
 											style={{
 												color: "#666",
 												backgroundColor: "#fff",
@@ -45,16 +45,16 @@ const RegisterInterest = ({value}) => {
 											<option>+54</option>
 										</select>
 										<input
-											type='number'
+											type='text'
 											placeholder='Number'
-											className='p-2 border-none outline-none  w-5/6'
+											className='p-2   border-none outline-none  '
 											required
 										/>
 									</div>
 									<input
 										type='submit'
 										value='Register Interest'
-										className='p-2 border border-slate-300 bg-black text-white outline-none cursor-pointer'
+										className='p-2  border border-slate-300 bg-black text-white outline-none cursor-pointer'
 									/>
 								</form>
 							</div>

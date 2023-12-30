@@ -68,7 +68,7 @@ const Contact = () => {
                       <option>+54</option>
                     </select>
                     <input
-                      type='number'
+                      type='text'
                       placeholder='Number'
                       className='p-2 border-none outline-none'
                       required
