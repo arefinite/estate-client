@@ -17,6 +17,7 @@ import Breadcrumb from '../components/shared/BreadCrumb'
 import CommonModal from '../components/shared/CommonModal'
 import RegisterInterest from '../components/RegisterInterest'
 import LightBox from '../components/Lightbox'
+import LightBoxMobile from '../components/LightBoxMobile'
 
 
 const buttons = [
@@ -39,7 +40,7 @@ const ProjectDetails = () => {
   } else {
     document.body.style.overflow = 'auto'
   }
-
+  console.log(showLightBox);
 
   return (
     <div>
@@ -65,7 +66,7 @@ const ProjectDetails = () => {
             ))}
           </Swiper>
         </div>
-        <div className='text-center  absolute z-[9] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-6xl'>
+        <div className='text-center absolute z-[9] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-white text-transparent  md:text-6xl'>
           <p>VELA DORCHESTER </p>
           <p>COLLECTION</p>
         </div>
@@ -73,12 +74,14 @@ const ProjectDetails = () => {
 
       <div className='container md:mt-24 px-4 md:px-0 mx-auto md:max-w-[700px]'>
         <div className='-mx-4 md:-mx-0'>
+          <div className='px-4 md:px-0'>
           <div
             onClick={() => setShowLightBox(true)}
-            className='relative bottom-20 z-20 text-white bg-slate-900 max-w-32 text-center rounded-2xl opacity-80 px-1 py-2 cursor-pointer text-xs'
+            className='relative bottom-16 z-20 text-white bg-slate-900 max-w-32 text-center rounded-2xl opacity-80  py-2 cursor-pointer text-xs'
           >
             Show All Photos
           </div>
+         </div>
           <Breadcrumb link1='/' link1Text='Home' link2Text='Project Details' />
         </div>
         <h1 className='heading'>
@@ -320,9 +323,16 @@ const ProjectDetails = () => {
       )}
       {
         showLightBox && (
-          <CommonModal setShowLightBox={setShowLightBox}>
+          <>
+          <div className='hidden md:block'>
+             <CommonModal setShowLightBox={setShowLightBox}>
             <LightBox/>
           </CommonModal>
+          </div>
+          <div className='md:hidden'>
+              <LightBoxMobile setShowLightBox={setShowLightBox} />
+            </div>
+          </>
         )
       }
     </div>

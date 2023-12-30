@@ -7,7 +7,8 @@ import { houseData } from '../data/houseData';
 
 const LightBox = () => {
   return (
-      <div className='container mx-auto bg-black  relative z-50'>
+
+       <div className='container mx-auto bg-black  relative z-50'>
             <Swiper
         navigation={true}
         style={{ '--swiper-navigation-color': '#fff' }}
@@ -27,7 +28,8 @@ const LightBox = () => {
               }
       
       </Swiper>
-    </div>
+        </div>
+
   )
 }
 export default LightBox
