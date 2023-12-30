@@ -83,7 +83,7 @@ const SearchFilterMobile = ({setShowFilter}) => {
 									<label htmlFor='develop' className='heading'>
 										Developer
 									</label>
-									<select className='p-2 pr-4 border border-slate-300 w-full outline-none '>
+									<select className='p-2 pr-4 border border-slate-300 w-full outline-none  '>
 										<option value=''>Please Select</option>
 										<option value=''>Develope One</option>
 										<option value=''>Developer Two</option>
@@ -153,22 +153,22 @@ const SearchFilterMobile = ({setShowFilter}) => {
 								<div>
 									<h1 className='heading'>Lifestyle</h1>
 									<div className='grid grid-cols-2 gap-4 pb-10 w-full mt-4'>
-										<div className='p-2 border border-slate-300 rounded-full w-[100%]  text-center outline-none hover:bg-black  hover:text-white'>
+										<div className='p-2  border border-slate-300 rounded-full w-[100%]  text-center outline-none hover:bg-black  hover:text-white'>
 											Beachfront
 										</div>
-										<div className='p-2 border border-slate-300 rounded-full w-[100%]  text-center outline-none hover:bg-black hover:text-white'>
+										<div className='p-2 flex items-center justify-center border border-slate-300 rounded-full w-[100%]  text-center outline-none hover:bg-black hover:text-white'>
 											Luxury Living
 										</div>
-										<div className='p-2 border border-slate-300 rounded-full w-[100%]  text-center outline-none hover:bg-black hover:text-white'>
+										<div className='p-2 flex items-center justify-center border border-slate-300 rounded-full w-[100%]  text-center outline-none hover:bg-black hover:text-white'>
 											Waterfront
 										</div>
-										<div className='p-2 border border-slate-300 rounded-full w-[100%]  text-center outline-none hover:bg-black hover:text-white'>
+										<div className='p-2 flex items-center justify-center border border-slate-300 rounded-full w-[100%]  text-center outline-none hover:bg-black hover:text-white'>
 											Near Golf
 										</div>
-										<div className='p-2 border border-slate-300 rounded-full w-[100%]  text-center outline-none hover:bg-black hover:text-white'>
+										<div className='p-2 flex items-center justify-center border border-slate-300 rounded-full w-[100%]  text-center outline-none hover:bg-black hover:text-white'>
 											Near Burj Khalifa
 										</div>
-										<div className='p-2 border border-slate-300 rounded-full w-[100%]  text-center outline-none hover:bg-black hover:text-white'>
+										<div className='p-2 flex items-center justify-center border border-slate-300 rounded-full w-[100%]  text-center outline-none hover:bg-black hover:text-white'>
 											Near Expo Duba
 										</div>
 									</div>
