@@ -2,7 +2,6 @@ import { FaXmark } from 'react-icons/fa6'
 import NavigationItems from './NavigationItems'
 
 const Navigation = ({ navOpen, setNavOpen, mode }) => {
-  console.log(mode)
   return (
     <>
       {mode === 'desktop' && (
