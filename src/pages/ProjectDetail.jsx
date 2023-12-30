@@ -16,6 +16,8 @@ import { images } from '../constants'
 import Breadcrumb from '../components/shared/BreadCrumb'
 import CommonModal from '../components/shared/CommonModal'
 import RegisterInterest from '../components/RegisterInterest'
+import LightBox from '../components/Lightbox'
+
 
 const buttons = [
   'Studio',
@@ -31,11 +33,13 @@ const ProjectDetails = () => {
     window.scrollTo(0, 0)
   }, [])
   const [showModal, setShowModal] = useState(false)
-  if (showModal) {
+  const [showLightBox, setShowLightBox] = useState(false)
+  if (showModal || showLightBox) {
     document.body.style.overflow = 'hidden'
   } else {
     document.body.style.overflow = 'auto'
   }
+
 
   return (
     <div>
@@ -66,10 +70,15 @@ const ProjectDetails = () => {
           <p>COLLECTION</p>
         </div>
       </div>
-    
 
       <div className='container md:mt-24 px-4 md:px-0 mx-auto md:max-w-[700px]'>
         <div className='-mx-4 md:-mx-0'>
+          <div
+            onClick={() => setShowLightBox(true)}
+            className='relative bottom-20 z-20 text-white bg-slate-900 max-w-32 text-center rounded-2xl opacity-80 px-1 py-2 cursor-pointer text-xs'
+          >
+            Show All Photos
+          </div>
           <Breadcrumb link1='/' link1Text='Home' link2Text='Project Details' />
         </div>
         <h1 className='heading'>
@@ -305,10 +314,17 @@ const ProjectDetails = () => {
 
       <RegisterInt setShowModal={setShowModal} />
       {showModal && (
-          <CommonModal setShowModal={setShowModal}>
-            <RegisterInterest value='Vela Dorchester Collection' />
+        <CommonModal setShowModal={setShowModal}>
+          <RegisterInterest value='Vela Dorchester Collection' />
+        </CommonModal>
+      )}
+      {
+        showLightBox && (
+          <CommonModal setShowLightBox={setShowLightBox}>
+            <LightBox/>
           </CommonModal>
-        )}
+        )
+      }
     </div>
   )
 }

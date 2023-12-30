@@ -8,11 +8,11 @@ import { useState } from 'react'
 const Search = () => {
   const { pathname } = useLocation()
   const [showFilter, setShowFilter] = useState(false)
-  if (showFilter) {
-    document.body.style.overflow = 'hidden'
-  } else {
-    document.body.style.overflow = 'auto'
-  }
+  // if (showFilter) {
+  //   document.body.style.overflow = 'hidden'
+  // } else {
+  //   document.body.style.overflow = 'auto'
+  // }
   return (
     <div
       className={`${
