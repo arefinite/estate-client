@@ -28,7 +28,7 @@ const Header = ({ setNavOpen, navOpen, showFilter, setShowFilter }) => {
         className={`w-full z-[99999] fixed  py-2  md:py-4 bg-white ${
           !scrolled && pathname === '/'
             ? 'lg:bg-transparent '
-            : 'lg:bg-white border-b border-stone-200 shadow-sm'
+            : 'lg:bg-white md:border-b md:border-stone-200 md:shadow-sm'
         } lg:px-4 xl:px-0 `}
       >
         <header className='lg:container lg:mx-auto relative z-[99999]'>

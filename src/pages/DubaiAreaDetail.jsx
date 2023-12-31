@@ -25,10 +25,10 @@ const DubaiAreaDetail = () => {
     <>
       <MobileFixedHeader icon='back' share text='back' link='/dubai-areas' />
       <main className='lg:pt-20'>
-        <div className='h-[500px] hidden md:block relative'>
+        <div className='h-[700px] hidden md:block relative'>
           <img
             src={images.sell}
-            className='h-[500px] w-full object-cover object'
+            className='h-[700px] w-full object-cover object'
             alt=''
           />
           <div className='absolute inset-0 bg-black opacity-40'></div>
@@ -40,7 +40,7 @@ const DubaiAreaDetail = () => {
           <div className='px-4 md:px-0'>
             <div className='md:text-center '>
               <div className='w-full md:max-w-[700px] mx-auto text-left'>
-                <div className='-mx-4 md:mx-0'>
+                <div className='-mx-4 md:mx-0 flex justify-between items-center'>
                 <Breadcrumb
                   link1='/'
                   link1Text='Home'
@@ -48,7 +48,8 @@ const DubaiAreaDetail = () => {
                   link3
                   link2 = '/dubai-areas'
                   link3Text='Down Town Dubai'
-                />
+                  />
+                  <div className='underline'>View Map</div>
                 </div>
                 <h1 className='heading md:text-center mt-8'>Down Town Dubai</h1>
                 <p>

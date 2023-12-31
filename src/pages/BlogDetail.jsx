@@ -25,10 +25,10 @@ const BlogDetail = () => {
             link3Text='Blog Detail'
           />
         </div>
-        <div className='h-[500px] hidden md:block relative'>
+        <div className='h-[700px] hidden md:block relative'>
           <img
             src={images.sell}
-            className='h-[500px] w-full object-cover'
+            className='h-[700px] w-full object-cover'
             alt=''
           />
         </div>
@@ -37,7 +37,8 @@ const BlogDetail = () => {
             <h1 className='heading'>
               Ultra-Luxury Waterfront Residences Direct Burj Khalifa Views
             </h1>
-            <p>11 June, 2023</p>
+            <span className='text-xs'>11 June, 2023</span>
+            <hr className='my-4' />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
               doloribus doloremque quaerat exercitationem saepe nihil! Totam
@@ -82,60 +83,56 @@ const BlogDetail = () => {
             <h1 className='heading px-4 md:px-0 md:text-center'>
               Similar Post
             </h1>
-
           </div>
-          
         </div>
         <div className='container mx-auto'>
-        <div className='border-b border-b-slate-200 md:border-0 md:px-4 xl:px-0'>
-          <Swiper
-              style={{ "--swiper-pagination-color": '#000' }}
-        slidesPerView={1}
-        spaceBetween={7}
-      
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 7,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 7,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 7,
-            },
-            1280: {
-                slidesPerView: 4,
-                spaceBetween: 7,
-          }
+          <div className='border-b border-b-slate-200 md:border-0 md:px-4 xl:px-0'>
+            <Swiper
+              style={{ '--swiper-pagination-color': '#000' }}
+              slidesPerView={1}
+              spaceBetween={7}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 7,
+                },
+                768: {
+                  slidesPerView: 4,
+                  spaceBetween: 7,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 7,
+                },
+                1280: {
+                  slidesPerView: 4,
+                  spaceBetween: 7,
+                },
               }}
-              
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-              {
-                  houseData.map(house => (
-                      <SwiperSlide key={house.id}>
-                      <Link to='/dubai-area-detail'>
-                      <div className='h-[30rem]'>
-                              <div>
-                              <img src={house.url} alt={house.id} className='h-[26rem] object-cover w-full ' />
-                          </div>
-                              <div className='mt-2 px-4 md:px-0 '>
-                                  <span className='font-bold'>{house.title}</span>
-                                  
-                                </div>
-                          </div>
-                          </Link>
-                    </SwiperSlide>
-                  ))
-        }
-      
-      </Swiper>
-    </div>
-      </div>
+              modules={[Pagination]}
+              className='mySwiper'
+            >
+              {houseData.map(house => (
+                <SwiperSlide key={house.id}>
+                  <Link to='/dubai-area-detail'>
+                    <div className='h-[30rem]'>
+                      <div>
+                        <img
+                          src={house.url}
+                          alt={house.id}
+                          className='h-[26rem] object-cover w-full '
+                        />
+                      </div>
+                      <div className='mt-2 px-4 md:px-0 '>
+                        <span className='font-bold'>{house.title}</span>
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
       </main>
     </>
   )

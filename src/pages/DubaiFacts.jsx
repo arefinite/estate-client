@@ -2,19 +2,27 @@ import { Link } from 'react-router-dom'
 import Breadcrumb from '../components/shared/BreadCrumb'
 import MobileFixedHeader from '../components/shared/header/MobileFixedHeader'
 import { images } from '../constants'
+import { useState } from 'react'
 
 const DubaiFacts = () => {
+  const [extend, setExtend] = useState(false)
   return (
     <>
       <MobileFixedHeader icon='back' share text='back' link='/' />
       <main className='lg:pt-16'>
         <div className='container mx-auto'>
-          <Breadcrumb link1='/' link1Text='Home' link2Text='Dubai Facts Numbers' />
+          <Breadcrumb
+            link1='/'
+            link1Text='Home'
+            link2Text='Explore'
+            link3
+            link3Text='Dubai Facts Numbers'
+          />
         </div>
-        <div className='h-[500px] hidden md:block relative'>
+        <div className='h-[700px] hidden md:block relative'>
           <img
             src={images.explore}
-            className='h-[500px] w-full object-bottom'
+            className='h-[700px] w-full object-bottom'
             alt=''
           />
           <div className='absolute inset-0 bg-black opacity-40'></div>
@@ -24,7 +32,7 @@ const DubaiFacts = () => {
         </div>
         <div className='container mx-auto md:max-w-[700px]'>
           <div className='px-4 md:px-0 mt-6'>
-          <h1 className='heading md:hidden'>Dubai Facts Numbers</h1>
+            <h1 className='heading md:hidden'>Dubai Facts Numbers</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
               doloribus doloremque quaerat exercitationem saepe nihil! Totam
@@ -36,25 +44,45 @@ const DubaiFacts = () => {
               id itaque deleniti minus et nobis ad! Ab magni necessitatibus
               corrupti, rem reiciendis dolore culpa cupiditate atque sequi
               doloremque.
+              {!extend && (
+                <span
+                  className='text-sm cursor-pointer text-slate-400'
+                  onClick={() => setExtend(true)}
+                >
+                  {'...Read More'}
+                </span>
+              )}
             </p>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-              doloribus doloremque quaerat exercitationem saepe nihil! Totam
-              tempora, commodi veniam amet sed id itaque deleniti minus et nobis
-              ad! Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
-              cupiditate atque sequi doloremque.Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit.
-            </p>
+            {extend && (
+              <>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Fugit doloribus doloremque quaerat exercitationem saepe nihil!
+                  Totam tempora, commodi veniam amet sed id itaque deleniti
+                  minus et nobis ad! Ab magni necessitatibus corrupti, rem
+                  reiciendis dolore culpa cupiditate atque sequi
+                  doloremque.Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.
+                </p>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-              doloribus doloremque quaerat exercitationem saepe nihil! Totam
-              tempora, commodi veniam amet sed id itaque deleniti minus et nobis
-              ad! Ab magni necessitatibus corrupti, rem reiciendis dolore culpa
-              cupiditate atque sequi doloremque.Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit.
-            </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Fugit doloribus doloremque quaerat exercitationem saepe nihil!
+                  Totam tempora, commodi veniam amet sed id itaque deleniti
+                  minus et nobis ad! Ab magni necessitatibus corrupti, rem
+                  reiciendis dolore culpa cupiditate atque sequi
+                  doloremque.Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit.
+                  <span
+                    className='text-sm ml-2 cursor-pointer text-slate-400'
+                    onClick={() => setExtend(false)}
+                  >
+                    {'Read Less'}
+                  </span>
+                </p>
+              </>
+            )}
           </div>
           <div className='md:flex md:justify-center px-4'>
             <Link to='/contact'>

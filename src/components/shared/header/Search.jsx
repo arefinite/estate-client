@@ -26,7 +26,7 @@ const Search = ({showFilter,setShowFilter}) => {
           <CiSearch className='text-xl font-bold ml-1' />
           <input
             className='ml-1 items-center outline-none bg-white text-stone-400 flex-grow min-w-0 w-80'
-            type='search'
+            type='text'
             placeholder='Search Properties, Area...'
           />
         </div>

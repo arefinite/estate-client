@@ -30,7 +30,7 @@ const Navigation = ({ navOpen, setNavOpen, mode }) => {
       {mode === 'mobile' && (
         <>
           <div
-            className={`fixed inset-0 overflow-auto w-full  bg-white  z-[3333] h-screen transition-transform ease-in-out duration-500 ${
+            className={`fixed inset-0 overflow-auto w-full  bg-white  z-[3333333] h-screen transition-transform ease-in-out duration-500 ${
               navOpen ? '' : 'transform translate-x-[1111px] '
             }`}
           >

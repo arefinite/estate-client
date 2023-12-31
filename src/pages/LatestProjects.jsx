@@ -3,11 +3,12 @@ import MobileFixedHeader from '../components/shared/header/MobileFixedHeader'
 import { houseData } from '../data/houseData'
 
 import Breadcrumb from '../components/shared/BreadCrumb'
-import { Swiper, SwiperSlide } from 'swiper/react'
+// import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { Pagination } from 'swiper/modules'
-const buttons = ['Near Burj Khalifa', 'Neax Expo Dubai', 'Waterfront', 'Near Golf', 'Beachfront', 'Luxury Living']
+import { Link } from 'react-router-dom'
+// import { Pagination } from 'swiper/modules'
+// const buttons = ['Near Burj Khalifa', 'Neax Expo Dubai', 'Waterfront', 'Near Golf', 'Beachfront', 'Luxury Living']
 const LatestProjects = () => {
 
   return (
@@ -35,7 +36,7 @@ const LatestProjects = () => {
             </div>
           </div>
         </div>
-        <div className='mt-4 px-4 md:px-0'>
+        {/* <div className='mt-4 px-4 md:px-0'>
         <Swiper 
 				slidesPerView={'2'}
                 spaceBetween={7}
@@ -68,12 +69,13 @@ const LatestProjects = () => {
 					</SwiperSlide>
 				))}
 			</Swiper>
-        </div>
+        </div> */}
 
         <div className='md:container md:mx-auto grid grid-cols-1 mt-2 md:grid-cols-4 md:gap-2 gap-4 mt-8 '>
           {houseData.map(house => (
-            <div
-              key={house.id}
+            <Link to='/project-detail'   key={house.id}>
+               <div
+            
               className='border-b border-b-slate-200 md:border-0 '
             >
               <div className='pb-4'>
@@ -94,6 +96,7 @@ const LatestProjects = () => {
                 </div>
               </div>
             </div>
+           </Link>
           ))}
         </div>
       </main>

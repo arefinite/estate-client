@@ -10,10 +10,10 @@ const Contact = () => {
         <div className='container mx-auto'>
           <Breadcrumb link1='/' link1Text='Home' link2Text='Contact Us' />
         </div>
-        <div className='h-[500px] hidden md:block relative'>
+        <div className='h-[700px] hidden md:block relative'>
           <img
             src={images.contact}
-            className='h-[500px] w-full object-cover object'
+            className='h-[700px] w-full object-cover object'
             alt=''
           />
           <div className='absolute inset-0 bg-black opacity-40'></div>
@@ -37,7 +37,7 @@ const Contact = () => {
               tempora, commodi veniam amet sed id itaque deleniti.
             </p>
             <div className='md:flex md:justify-center'>
-              <div className='flex flex-col md:w-1/2 mt-8 '>
+              <div className='flex flex-col md:w-3/4 mt-8 '>
                 <form
                   onSubmit={e => e.preventDefault()}
                   className='flex flex-col gap-4'

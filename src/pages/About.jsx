@@ -10,10 +10,10 @@ const About = () => {
         <div className='container mx-auto'>
           <Breadcrumb link1='/' link1Text='Home' link2Text='About Us' />
         </div>
-        <div className='h-[500px] hidden md:block relative'>
+        <div className='h-[700px] hidden md:block relative'>
           <img
             src={images.about}
-            className='h-[500px] w-full object-cover object'
+            className='h-[700px] w-full object-cover object'
             alt=''
           />
           <div className='absolute inset-0 bg-black opacity-40'></div>
@@ -23,7 +23,7 @@ const About = () => {
         </div>
         <div className='container mx-auto md:max-w-[700px]'>
           <div className='px-4 md:px-0 mt-6'>
-          <h1 className='md:hidden'>About Us</h1>
+            <h1 className='md:hidden'>About Us</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
               doloribus doloremque quaerat exercitationem saepe nihil! Totam

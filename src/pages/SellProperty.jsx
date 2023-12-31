@@ -15,10 +15,10 @@ const SellProperty = () => {
             link2Text='Sell Your Property'
           />
         </div>
-        <div className='h-[500px] hidden md:block relative'>
+        <div className='h-[700px] hidden md:block relative'>
           <img
             src={images.sell}
-            className='h-[500px] w-full object-cover object'
+            className='h-[700px] w-full object-cover object'
             alt=''
           />
           <div className='absolute inset-0 bg-black opacity-40'></div>
@@ -28,7 +28,7 @@ const SellProperty = () => {
         </div>
         <div className='container mx-auto md:max-w-[700px]'>
           <div className='px-4 md:px-0 mt-6'>
-          <h1 className='md:hidden'>Sell Your Property</h1>
+            <h1 className='md:hidden'>Sell Your Property</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
               doloribus doloremque quaerat exercitationem saepe nihil! Totam
@@ -44,7 +44,7 @@ const SellProperty = () => {
               <div className='flex flex-col md:w-1/2  mt-8'>
                 <form
                   onSubmit={e => e.preventDefault()}
-                  className='flex flex-col gap-4'
+                  className='flex flex-col gap-4 dev'
                 >
                   <input
                     type='text'
@@ -52,12 +52,7 @@ const SellProperty = () => {
                     className='p-2 border border-slate-300 w-full outline-none'
                     required
                   />
-                  <input
-                    type='email'
-                    placeholder='Email'
-                    className='p-2 border border-slate-300 w-full outline-none'
-                    required
-                  />
+                
                   <div className='border border-slate-300'>
                     <select
                       style={{
@@ -79,29 +74,33 @@ const SellProperty = () => {
                     />
                   </div>
                   <input
-                    type='text'
-                    placeholder='Property For'
+                    type='email'
+                    placeholder='Email'
                     className='p-2 border border-slate-300 w-full outline-none'
                     required
                   />
-                  <input
-                    type='text'
-                    placeholder='Property Type'
-                    className='p-2 border border-slate-300 w-full outline-none'
-                    required
-                  />
+                  <select className='p-2 pr-4 border border-slate-300 outline-none '>
+                    <option value=''>Property For</option>
+                    <option value=''>Property One</option>
+                    <option value=''>Property Two</option>
+                  </select>
+                  <select className='p-2 pr-4 border border-slate-300 outline-none '>
+              <option value=''>Property Type</option>
+              <option value=''>Property Type One</option>
+              <option value=''>Property Type Two</option>
+            </select>
                   <input
                     type='text'
                     placeholder='Location'
                     className='p-2 border border-slate-300 w-full outline-none'
                     required
                   />
-                  <input
-                    type='text'
-                    placeholder='Bedrooms'
-                    className='p-2 border border-slate-300 w-full outline-none'
-                    required
-                  />
+                  <select className='p-2 pr-4 border border-slate-300 outline-none '>
+              <option value=''>Bedrooms</option>
+              <option value=''>1 Bedroom</option>
+              <option value=''>2 Bedrooms</option>
+              <option value=''>3 Bedrooms</option>
+            </select>
                   <input
                     type='text'
                     placeholder='Size (Sq.Ft.)'
