@@ -7,22 +7,22 @@ const Navigation = ({ navOpen, setNavOpen, mode }) => {
       {mode === 'desktop' && (
         <>
           <div
-            className={`fixed shadow-2xl overflow-auto no-scrollbar  top-0 right-0 bg-white  w-[300px] z-[3333] h-screen transition-transform ease-in-out duration-500 ${
+            className={`fixed  shadow-2xl overflow-auto no-scrollbar   top-0 right-0 bg-white  w-[300px] z-[333333] h-screen transition-transform ease-in-out duration-500 ${
               navOpen ? '' : 'transform translate-x-[300px] '
             }`}
           >
-            <div className='flex items-center justify-between px-4 mt-6'>
-              <div className='bold'>Welcome!</div>
+            <div className='flex items-center justify-end px-4 mt-6'>
+              {/* <div className='bold'>Welcome!</div> */}
               <div className='cursor-pointer' onClick={()=>setNavOpen(false)}><FaXmark/></div>
             </div>
-             <hr className='mt-4' />
+             {/* <hr className='mt-4' /> */}
             <NavigationItems setNavOpen={setNavOpen} />
           </div>
           <div
             onClick={() => setNavOpen(false)}
             className={`${
               navOpen &&
-              'fixed bg-black opacity-50 h-full w-full z-[1000] inset-0'
+              'fixed bg-black opacity-80 h-full w-full z-[100000] inset-0'
             }`}
           ></div>
         </>

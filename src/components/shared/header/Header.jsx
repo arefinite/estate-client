@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react'
 import Logo from './Logo'
 import Navs from './Navs'
 import Search from './Search'
+import { useLocation } from 'react-router-dom'
 
-const Header = ({ setNavOpen, navOpen,showFilter,setShowFilter }) => {
+const Header = ({ setNavOpen, navOpen, showFilter, setShowFilter }) => {
   const [scrolled, setScrolled] = useState(false)
+  const { pathname } = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,22 +23,39 @@ const Header = ({ setNavOpen, navOpen,showFilter,setShowFilter }) => {
     }
   }, [scrolled])
   return (
-    <div
-      className={`w-full z-30 fixed  py-2  md:py-4 bg-white ${
-        scrolled
-          ? 'lg:bg-white border-b border-stone-200 shadow-lg'
-          : 'lg:bg-transparent'
-      } lg:px-4 xl:px-0 `}
-    >
-      <header className='lg:container lg:mx-auto relative z-20 '>
-        <section
-          className={`lg:container lg:mx-auto lg:flex  lg:justify-between items-center`}
-        >
-          <Logo />
-          <Search setShowFilter={setShowFilter} showFilter={showFilter} />
-          <Navs scrolled={scrolled} setNavOpen={setNavOpen} navOpen={navOpen} />
-        </section>
-      </header>
+    <div className='z-40'>
+      <div
+        className={`w-full z-[99999] fixed  py-2  md:py-4 bg-white ${
+          !scrolled && pathname === '/'
+            ? 'lg:bg-transparent '
+            : 'lg:bg-white border-b border-stone-200 shadow-sm'
+        } lg:px-4 xl:px-0 `}
+      >
+        <header className='lg:container lg:mx-auto relative z-[99999]'>
+          <section
+            className={`lg:container lg:mx-auto lg:flex  lg:justify-between items-center relative z-[99999]`}
+          >
+            <Logo showFilter={showFilter} setShowFilter={setShowFilter} />
+            <Search setShowFilter={setShowFilter} showFilter={showFilter} />
+            <Navs
+              showFilter={showFilter}
+              setShowFilter={setShowFilter}
+              scrolled={scrolled}
+              setNavOpen={setNavOpen}
+              navOpen={navOpen}
+            />
+          </section>
+        </header>
+      </div>
+      {showFilter && (
+        <div
+          onClick={() => setShowFilter(false)}
+          className={`${
+            showFilter &&
+            'fixed bg-black opacity-80 h-full z-50 w-full inset-0 '
+          }`}
+        ></div>
+      )}
     </div>
   )
 }

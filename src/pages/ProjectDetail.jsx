@@ -39,7 +39,7 @@ const ProjectDetails = () => {
   } else {
     document.body.style.overflow = 'auto'
   }
-  console.log(showModal,showLightBox);
+
 
   return (
     <div>

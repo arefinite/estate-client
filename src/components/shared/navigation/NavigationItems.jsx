@@ -32,8 +32,8 @@ const NavigationItems = ({ setNavOpen, mode }) => {
         <div
           onClick={() => {
             setShow1(prev => !prev)
-            setShow2(false)
-            setShow3(false)
+            // setShow2(false)
+            // setShow3(false)
           }}
         >
           <span className='flex items-center gap-2'>
@@ -64,8 +64,8 @@ const NavigationItems = ({ setNavOpen, mode }) => {
         <div
           onClick={() => {
             setShow2(prev => !prev)
-            setShow1(false)
-            setShow3(false)
+            // setShow1(false)
+            // setShow3(false)
           }}
         >
           <span className='flex items-center gap-2'>
@@ -101,8 +101,9 @@ const NavigationItems = ({ setNavOpen, mode }) => {
 
         <div
           onClick={() => {
-            setShow3(prev => !prev), setShow1(false)
-            setShow2(false)
+            setShow3(prev => !prev)
+            // setShow1(false)
+            // setShow2(false)
           }}
         >
           <span className='flex items-center gap-2'>

@@ -6,11 +6,11 @@ import SearchFilterMobile from '../../SearchFilterMobile'
 
 const Search = ({showFilter,setShowFilter}) => {
   const { pathname } = useLocation()
-  // if (showFilter) {
-  //   document.body.style.overflow = 'hidden'
-  // } else {
-  //   document.body.style.overflow = 'auto'
-  // }
+  if (showFilter) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'auto'
+  }
   return (
     <div
       className={`${
@@ -19,7 +19,7 @@ const Search = ({showFilter,setShowFilter}) => {
           : 'block lg:flex-1 lg:w-screen px-4  p-0 '
       }`}
     >
-      <div className='flex gap-1 items-center relative'>
+      <div className='flex gap-1 items-center '>
         <div
           className={`flex items-center md:min-w-[500px] flex-grow h-12 overflow-hidden 'shadow-md'  bg-white border border-stone-200 p-2 rounded-full`}
         >
@@ -36,8 +36,9 @@ const Search = ({showFilter,setShowFilter}) => {
       </div>
       {showFilter && (
         <>
+          
           <div className='hidden md:block'>
-          <div className='absolute bg-white md:min-w-[500px] top-14 rounded-3xl p-6 shadow-lg'>
+          <div className='absolute bg-white z-10 md:min-w-[500px] top-14 rounded-3xl p-6 shadow-lg'>
           <SearchFilter />
           </div>
          </div>

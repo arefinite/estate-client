@@ -16,10 +16,15 @@ const RootLayout = () => {
     document.body.style.overflow = 'auto'
   }
 
-  
   return (
     <Wrapper>
-      <Header setNavOpen={setNavOpen} navOpen={navOpen} setShowFilter={setShowFilter} showFilter={showFilter} />
+      <Header
+        setNavOpen={setNavOpen}
+        navOpen={navOpen}
+        setShowFilter={setShowFilter}
+        showFilter={showFilter}
+      />
+
       <Outlet />
       <Footer />
       <MobileNavigation
@@ -28,11 +33,7 @@ const RootLayout = () => {
         setMode={setMode}
         setShowFilter={setShowFilter}
       />
-      <Navigation
-        navOpen={navOpen}
-        setNavOpen={setNavOpen}
-        mode={mode}
-      />
+      <Navigation navOpen={navOpen} setNavOpen={setNavOpen} mode={mode} />
     </Wrapper>
   )
 }
