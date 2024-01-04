@@ -1,21 +1,20 @@
 
 import { useState } from "react"
-import SecondaryMobileHeader from "./shared/header/SecondaryMobileHeader"
 
 import { Range } from "react-range"
+import SecondaryMobileHeader from "../components/shared/header/SecondaryMobileHeader"
 
-const SearchFilterMobile = ({setShowFilter}) => {
+const SearchMobile = () => {
     const [range, setRange] = useState([550000, 960000])
 	const handleRangeChange = newRange => {
 		setRange(newRange)
 	}
 
   return (
-    <div className="h-full w-full overflow-auto fixed z-50 bg-white inset-0">
-    <div>
-			<div className='flex'>
+    
+			<div className='flex md:container md:mx-auto'>
 				<div className='relative'>
-					<SecondaryMobileHeader setShowFilter={setShowFilter}  icon='delete' name='Search' />
+					<SecondaryMobileHeader link='/'  icon='delete' name='Search' />
 
 					<div className='w-[90%] mx-auto '>
 						<div className='mt-8 flex justify-center text-lg w-full'>
@@ -177,7 +176,7 @@ const SearchFilterMobile = ({setShowFilter}) => {
 						</div>
 					</div>
 
-					<div className='p-4 sticky box-top-shadow border border-t-slate-100  bottom-0 bg-white py-2'>
+					<div className='p-4 sticky w-full box-top-shadow border  border-t-slate-100  bottom-0 bg-white py-2'>
 						<div className='flex justify-between'>
 							<input type='reset' className='font-bold' value='Clear All' />
 							<input
@@ -189,8 +188,7 @@ const SearchFilterMobile = ({setShowFilter}) => {
 					</div>
 				</div>
 			</div>
-		</div>
-</div>
+		
   )
 }
-export default SearchFilterMobile
+export default SearchMobile

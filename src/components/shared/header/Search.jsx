@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom'
 import SearchFilter from '../../SearchFilter'
 import SearchFilterMobile from '../../SearchFilterMobile'
 
-const Search = ({showFilter,setShowFilter}) => {
+const Search = ({ showFilter, setShowFilter }) => {
   const { pathname } = useLocation()
   if (showFilter) {
     document.body.style.overflow = 'hidden'
@@ -30,21 +30,23 @@ const Search = ({showFilter,setShowFilter}) => {
             placeholder='Search Properties, Area...'
           />
         </div>
-        <div onClick={() => setShowFilter(prev => !prev)} className='cursor-pointer h-12 w-12 bg-black rounded-full p-3 text-white flex items-center justify-center text-2xl'>
-          <PiSlidersFill  />
+        <div
+          onClick={() => setShowFilter(prev => !prev)}
+          className='cursor-pointer h-12 w-12 bg-black rounded-full p-3 text-white flex items-center justify-center text-2xl'
+        >
+          <PiSlidersFill />
         </div>
       </div>
       {showFilter && (
         <>
-          
           <div className='hidden md:block'>
-          <div className='absolute bg-white z-10 md:min-w-[500px] top-14 rounded-3xl p-6 shadow-lg'>
-          <SearchFilter />
+            <div className='absolute bg-white z-10 md:min-w-[500px] top-14 rounded-3xl p-6 shadow-lg'>
+              <SearchFilter />
+            </div>
           </div>
-         </div>
           <div className='md:hidden'>
             <SearchFilterMobile setShowFilter={setShowFilter} />
-        </div>
+          </div>
         </>
       )}
     </div>

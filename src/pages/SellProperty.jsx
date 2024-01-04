@@ -81,13 +81,16 @@ const SellProperty = () => {
                   />
                   <select className='p-2 pr-4 border border-slate-300 outline-none '>
                     <option value=''>Property For</option>
-                    <option value=''>Property One</option>
-                    <option value=''>Property Two</option>
+                    <option value=''>Rent</option>
+                    <option value=''>Sell</option>
+                    <option value=''>Manage</option>
                   </select>
                   <select className='p-2 pr-4 border border-slate-300 outline-none '>
               <option value=''>Property Type</option>
-              <option value=''>Property Type One</option>
-              <option value=''>Property Type Two</option>
+              <option value=''>Apartment</option>
+              <option value=''>Villa</option>
+              <option value=''>Townhouse</option>
+              <option value=''>Penthouse</option>
             </select>
                   <input
                     type='text'
@@ -97,9 +100,11 @@ const SellProperty = () => {
                   />
                   <select className='p-2 pr-4 border border-slate-300 outline-none '>
               <option value=''>Bedrooms</option>
+              <option value=''>Studio</option>
               <option value=''>1 Bedroom</option>
               <option value=''>2 Bedrooms</option>
               <option value=''>3 Bedrooms</option>
+              <option value=''>4 Bedrooms +</option>
             </select>
                   <input
                     type='text'

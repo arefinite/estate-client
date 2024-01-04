@@ -9,7 +9,7 @@ const MobileFixedHeader = ({ link, icon, text, download, share }) => {
 
   return (
     <>
-      <div className='md:hidden flex justify-center sticky h-16 top-0 bg-white border-b border-slate-200 z-[50]'>
+      <div className='md:hidden flex justify-center sticky h-16 top-0 bg-white border-b border-slate-200 z-40'>
         <div>
           <div className='flex justify-between'>
             <button className='absolute left-4 top-6'>

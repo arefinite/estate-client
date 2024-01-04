@@ -120,7 +120,7 @@ const BlogDetail = () => {
                         <img
                           src={house.url}
                           alt={house.id}
-                          className='h-[26rem] object-cover w-full '
+                          className='aspect-square object-cover '
                         />
                       </div>
                       <div className='mt-2 px-4 md:px-0 '>

@@ -25,7 +25,7 @@ const QuickLinks = () => {
         <div className='space-x-4 text-center border-t pt-4 mt-4 lg:pt-0 lg:mt-0 lg:border-t-0'>
           <span>Currency</span>
           <span>
-            <select className='bg-black border  border-white px-2'>
+            <select className='bg-black border-0 px-2 cursor-pointer'>
               <option value='AED'>AED</option>
               <option value='USD'>USD</option>
             </select>

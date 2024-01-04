@@ -33,20 +33,20 @@ const ProjectDetails = () => {
     window.scrollTo(0, 0)
   }, [])
   const [showModal, setShowModal] = useState(false)
+  const [moreInfo, setMoreInfo] = useState(false)
   const [showLightBox, setShowLightBox] = useState(false)
-  if (showModal || showLightBox) {
+  if (showModal || showLightBox || moreInfo) {
     document.body.style.overflow = 'hidden'
   } else {
     document.body.style.overflow = 'auto'
   }
-
 
   return (
     <div>
       <MobileFixedHeader link='/' icon='back' text='Back' download share />
       <div className='relative h-[500px]'>
         <div className='lg:pt-20'>
-          <Swiper
+          {/* <Swiper
             pagination={true}
             modules={[Pagination]}
             style={{ '--swiper-pagination-color': '#000' }}
@@ -63,7 +63,17 @@ const ProjectDetails = () => {
                 </Link>
               </SwiperSlide>
             ))}
-          </Swiper>
+          </Swiper> */}
+          {houseData.slice(2, 3).map(house => (
+            <Link key={house.id}>
+              <img
+                className='w-full h-[500px] object-cover '
+                src={house.url}
+                alt=''
+                onClick={() => setShowLightBox(true)}
+              />
+            </Link>
+          ))}
         </div>
         <div className='text-center absolute z-[9] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-white text-transparent  md:text-6xl'>
           <p>VELA DORCHESTER </p>
@@ -208,7 +218,10 @@ const ProjectDetails = () => {
         </div>
         <Link to=''>
           <div className='text-center'>
-            <button className='w-full md:max-w-[300px]  bg-black text-white p-3 mt-4'>
+            <button
+              className='w-full md:max-w-[300px]  bg-black text-white p-3 mt-4'
+              onClick={() => setMoreInfo(true)}
+            >
               Request More Information
             </button>
           </div>
@@ -314,10 +327,18 @@ const ProjectDetails = () => {
         </div>
       </div>
 
-      { !showModal && <RegisterInt setShowModal={setShowModal} />}
+      {!showModal && !moreInfo && <RegisterInt setShowModal={setShowModal} />}
       {showModal && (
         <CommonModal setShowModal={setShowModal}>
           <RegisterInterest value='Vela Dorchester Collection' />
+        </CommonModal>
+      )}
+      {moreInfo && (
+        <CommonModal setShowModal={setShowModal} setMoreInfo={setMoreInfo}>
+          <RegisterInterest
+            value='Request More Information'
+            btnText='Request More Information'
+          />
         </CommonModal>
       )}
       {showLightBox && (

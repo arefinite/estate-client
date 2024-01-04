@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import RootLayout from '../layouts/RootLayout'
-import { About, Apartments, BlogDetail, Blogs, Contact, DubaiAreaDetail, DubaiAreas, DubaiDeveloperDetail, DubaiDevelopers, DubaiFacts, DubaiProjects, GuideRenting, GuideSelling, GuideTo, Home, InvestDubai, InvestIn, Land, LatestProjects, LuxuryProjects, Map, NotFound, Penthouse, Privacy, ProjectDetail, SellProperty, Townhouse, Villa, WhyDubai } from '../pages'
+import { About, Apartments, BlogDetail, Blogs, Contact, DubaiAreaDetail, DubaiAreas, DubaiDeveloperDetail, DubaiDevelopers, DubaiFacts, DubaiProjects, GuideRenting, GuideSelling, GuideTo, Home, InvestDubai, InvestIn, Land, LatestProjects, LuxuryProjects, Map, NotFound, Penthouse, Privacy, ProjectDetail, SearchMobile, SellProperty, Townhouse, Villa, WhyDubai } from '../pages'
 import DashboardLayout from '../layouts/DashboardLayout'
 import Dashboard from '../pages/dashboard/Dashboard'
 import Login from '../pages/dashboard/Login'
@@ -123,6 +123,10 @@ export const appRouter = createBrowserRouter([
             path: 'project-detail',
             element: <ProjectDetail />,
           },
+          {
+            path: 'search',
+            element: <SearchMobile/>
+          }
        
           
         ],

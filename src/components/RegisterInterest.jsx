@@ -1,7 +1,7 @@
 import SecondaryMobileHeader from "./shared/header/SecondaryMobileHeader"
 
 
-const RegisterInterest = ({value}) => {
+const RegisterInterest = ({value,btnText}) => {
 	return (
 		<div className="p-1 pb-4 md:pb-0 md:p-5">
 			<div>
@@ -10,7 +10,7 @@ const RegisterInterest = ({value}) => {
 					<div className=""><SecondaryMobileHeader  name='Register Interest' /></div>
 					<div>
 						<div>
-							<h1 className='text-center pb-8 heading w-screen md:w-full'>
+							<h1 className='text-center pb-8 pt-4 md:pt-0 heading w-screen md:w-full'>
 								{value}
 							</h1>
 							<div>
@@ -53,7 +53,7 @@ const RegisterInterest = ({value}) => {
 									</div>
 									<input
 										type='submit'
-										value='Register Interest'
+										value={btnText ? btnText : 'Register Interest'}
 										className='p-2  border border-slate-300 bg-black text-white outline-none cursor-pointer'
 									/>
 								</form>

@@ -4,7 +4,7 @@ import MobileFixedHeader from "../components/shared/header/MobileFixedHeader"
 const Map = () => {
   return (
       <section >
-          <MobileFixedHeader link='/' text='Back' icon='back' share />
+          <MobileFixedHeader link='/' text='back' icon='back' share />
 
           <div className="h-screen w-full md:pt-20">
               

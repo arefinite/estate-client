@@ -12,12 +12,12 @@ const SecondaryMobileHeader = ({
   nav = false,
   setNavOpen,
   setShowLightBox,
-  setShowFilter
+  setShowFilter,
+  setMoreInfo,
 }) => {
-  
   return (
     <div
-      className={`flex justify-center sticky h-16 top-0 bg-white border-b border-slate-200 md:border-none z-[50] `}
+      className={`flex justify-center sticky h-16 top-0 bg-white border-b border-slate-200 md:border-none z-50 `}
     >
       <div>
         <div className='flex justify-between'>
@@ -34,10 +34,16 @@ const SecondaryMobileHeader = ({
             ) : (
               <Link to={link}>
                 <div className='flex gap-1'>
-                    {icon === 'back' ? (
-                      <IoIosArrowBack />
-                    ) : icon === 'delete' ? (
-                        <FaXmark onClick={() => { setShowLightBox && setShowLightBox(false);  setShowFilter && setShowFilter(false)}} />
+                  {icon === 'back' ? (
+                    <IoIosArrowBack />
+                  ) : icon === 'delete' ? (
+                    <FaXmark
+                      onClick={() => {
+                        setShowLightBox && setShowLightBox(false)
+                        setMoreInfo && setMoreInfo(false)
+                        setShowFilter && setShowFilter(false)
+                      }}
+                    />
                   ) : null}
 
                   <div className='relative  bottom-1'>{text}</div>

@@ -4,8 +4,9 @@ import MobileNavigation from '../components/shared/navigation/MobileNavigation'
 import { useState } from 'react'
 import Navigation from '../components/shared/navigation/Navigation'
 import Wrapper from '../components/Wrapper'
-
+import {useLocation} from 'react-router-dom'
 const RootLayout = () => {
+  const {pathname} = useLocation()
   const [navOpen, setNavOpen] = useState(false)
   const [mode, setMode] = useState('desktop')
   const [showFilter, setShowFilter] = useState(false)
@@ -26,13 +27,13 @@ const RootLayout = () => {
       />
 
       <Outlet />
-      <Footer />
-      <MobileNavigation
+      {pathname !== '/search' && <Footer />}
+    {pathname !== '/search' &&   <MobileNavigation
         navOpen={navOpen}
         setNavOpen={setNavOpen}
         setMode={setMode}
         setShowFilter={setShowFilter}
-      />
+      />}
       <Navigation navOpen={navOpen} setNavOpen={setNavOpen} mode={mode} />
     </Wrapper>
   )

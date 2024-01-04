@@ -109,3 +109,7 @@ p{
   line-height: 1em;
   color: #fff; /* White checkmark */
 }
+
+.navigation:hover {
+  background-color: #f1f1f1;
+}

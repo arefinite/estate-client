@@ -1,6 +1,11 @@
 import { FaXmark } from 'react-icons/fa6'
 
-const CommonModal = ({ setShowModal,setShowLightBox, children  }) => {
+const CommonModal = ({
+  setShowModal,
+  setShowLightBox,
+  setMoreInfo,
+  children,
+}) => {
   const modal = {
     position: 'fixed',
     top: '50%',
@@ -32,8 +37,9 @@ const CommonModal = ({ setShowModal,setShowLightBox, children  }) => {
         <button
           style={closeButton}
           onClick={() => {
-           setShowModal && setShowModal(false)
-           setShowLightBox && setShowLightBox(false)
+            setShowModal && setShowModal(false)
+            setShowLightBox && setShowLightBox(false)
+            setMoreInfo && setMoreInfo(false)
           }}
         >
           <FaXmark />
@@ -42,8 +48,9 @@ const CommonModal = ({ setShowModal,setShowLightBox, children  }) => {
       <div
         style={overlay}
         onClick={() => {
-			setShowModal && setShowModal(false)
-			setShowLightBox && setShowLightBox(false)
+          setShowModal && setShowModal(false)
+          setShowLightBox && setShowLightBox(false)
+          setMoreInfo && setMoreInfo(false)
         }}
       ></div>
     </div>

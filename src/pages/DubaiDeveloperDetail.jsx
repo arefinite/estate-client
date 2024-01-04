@@ -32,7 +32,7 @@ const DubaiDeveloperDetail = () => {
         />
         <div>
           <div className='md:text-center mt-6 md:mt-20 px-4 md:px-0 space-y-6'>
-            <div className='p-6 md:p-0 flex-1  grid place-content-center md:border-0 border border-slate-300 w-full'>
+            <div className='p-6 md:p-0 flex-1  grid place-content-center  w-full'>
               <img
                 src={images.emaar}
                 alt=''
