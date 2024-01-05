@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
-
-const QuickLinks = () => {
+import { Link,useLocation } from "react-router-dom"
+const QuickLinks = ({ setShowModal }) => {
+  const { pathname } = useLocation()
   return (
     <section className='lg:container lg:mx-auto border-b lg:border-t mt-4 lg:mt-8 py-4 border-b-white border-t-white'>
       <div className='lg:flex lg:justify-between lg:items-center'>
@@ -14,9 +14,9 @@ const QuickLinks = () => {
             </div>
 
             <div className='flex'>
-              <span>Newsletter </span>
+              { pathname !== '/project-detail' &&  <span className="cursor-pointer" onClick={()=>setShowModal(true)}>Newsletter </span>}
               <div className='w-[1px] h-3 mt-[14px] bg-white mx-4'></div>
-              <span>Sitemap</span>
+              <span className="cursor-pointer">Sitemap</span>
               <div className='w-[1px] h-3 mt-[14px] bg-white mx-4'></div>
              <Link to='/contact'> <span>Contact Us</span></Link>
             </div>

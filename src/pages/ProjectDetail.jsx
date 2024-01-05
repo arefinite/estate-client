@@ -40,13 +40,13 @@ const ProjectDetails = () => {
   } else {
     document.body.style.overflow = 'auto'
   }
-
   return (
     <div>
       <MobileFixedHeader link='/' icon='back' text='Back' download share />
       <div className='relative h-[500px]'>
         <div className='lg:pt-20'>
-          {/* <Swiper
+          <div className='md:hidden'>
+              <Swiper
             pagination={true}
             modules={[Pagination]}
             style={{ '--swiper-pagination-color': '#000' }}
@@ -63,7 +63,10 @@ const ProjectDetails = () => {
                 </Link>
               </SwiperSlide>
             ))}
-          </Swiper> */}
+          </Swiper>
+          </div>
+        
+          <div className='hidden md:block'>
           {houseData.slice(2, 3).map(house => (
             <Link key={house.id}>
               <img
@@ -74,6 +77,7 @@ const ProjectDetails = () => {
               />
             </Link>
           ))}
+        </div>
         </div>
         <div className='text-center absolute z-[9] top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-white text-transparent  md:text-6xl'>
           <p>VELA DORCHESTER </p>
@@ -336,7 +340,7 @@ const ProjectDetails = () => {
       {moreInfo && (
         <CommonModal setShowModal={setShowModal} setMoreInfo={setMoreInfo}>
           <RegisterInterest
-            value='Request More Information'
+           
             btnText='Request More Information'
           />
         </CommonModal>

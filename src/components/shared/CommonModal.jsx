@@ -13,8 +13,8 @@ const CommonModal = ({
     transform: 'translate(-50%, -50%)',
     minWidth: '350px',
     backgroundColor: 'white',
-    minHeight: '380px',
-    zIndex: 111111,
+    minHeight: '250px',
+    zIndex: 11111111111,
   }
   const overlay = {
     position: 'fixed',
